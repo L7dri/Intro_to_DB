@@ -27,7 +27,7 @@ CREATE TABLE Orders (
 
 CREATE TABLE Order_Details (
       orderdetailid (Primary Key)
-      order_id (Foreign Key referencing Orders table)
-      book_id INT (Foreign Key referencing Books table)
+      order_id (FOREIGN KEY (order_id) REFERENCES Orders(order_id))
+      book_id INT (FOREIGN KEY (book_id) REFERENCES Books(book_id))
       quantity DOUBLE
     );
